@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Gallery | SriRam Cleaning</title>
+    <!-- Tailwind CSS for Layout -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Modern Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        .gallery-overlay {
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+                <a href="mahahome.html" class="flex-shrink-0 flex items-center gap-2">
+    <div class="rounded-full border-2 border-yellow-400 p-0">
+        <img 
+            src="mahaganapathyph/mahaph5.png" 
+            alt="Maha Ganapathy Logo"
+            class="w-18 h-16 rounded-full object-contain"
+        >
+    </div>
+    <span class="font-bold text-xl tracking-tight text-gray-800 uppercase">
+        SRIRAM CLEANING
+    </span>
+</a>
+
+                
+                <!-- Desktop Links -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="mahahome.html" class="font-medium text-gray-600 hover:text-yellow-500 transition">Home</a>
+                    <a href="gallery.html" class="font-medium text-yellow-500 transition">Gallery</a>
+                    <a href="mahahome.html#contact-page" class="font-medium text-gray-600 hover:text-yellow-500 transition">Contact Us</a>
+                    <a href="tel:+919876543210" class="bg-yellow-400 text-white px-6 py-2 rounded-full font-bold hover:bg-yellow-500 transition shadow-lg flex items-center gap-2">
+                        <i class="fas fa-phone"></i> Call Now
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button onclick="toggleMenu()" class="text-gray-600 p-2">
+                        <i id="menu-icon" class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu Links -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t py-4 px-4 space-y-4 shadow-xl text-sm font-bold">
+            <a href="mahahome.html" class="block w-full text-left py-2 border-b border-gray-50 uppercase tracking-widest">Home</a>
+            <a href="mahagallery.html" class="block w-full text-left py-2 border-b border-gray-50 text-yellow-500 uppercase tracking-widest">Gallery</a>
+            <a href="mahahome.html#contact-page" class="block w-full text-left py-2 border-b border-gray-50 uppercase tracking-widest text-gray-600">Contact Us</a>
+            <a href="tel:+919876543210" class="block w-full text-center bg-yellow-400 text-white py-3 rounded-lg font-bold">Call Now</a>
+        </div>
+    </nav>
+
+    <!-- Gallery Header -->
+    <section class="py-16 bg-gray-50 border-b">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 uppercase tracking-tighter">Our Work <span class="text-yellow-500">Gallery</span></h1>
+            <p class="text-gray-600 max-w-2xl mx-auto text-lg">Visual proof of our dedication to absolute cleanliness and hygiene. See our experts in action across various sites.</p>
+            <div class="w-24 h-2 bg-yellow-400 mx-auto mt-8 rounded-full"></div>
+        </div>
+    </section>
+
+    <!-- Before & After Showcase -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 flex items-center gap-3 uppercase tracking-tighter">
+                <span class="bg-yellow-400 w-3 h-10 rounded-full"></span>
+                Before & After Results
+            </h2>
+            <div class="grid md:grid-cols-2 gap-16">
+                <!-- Comparison 1 -->
+                <div class="group">
+                    <div class="flex gap-4 h-72">
+                        <div class="w-1/2 relative rounded-3xl overflow-hidden shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1584622781564-1d9876a13d00?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover" alt="Before">
+                            <span class="absolute bottom-4 left-4 bg-red-600 text-white text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest">Before</span>
+                        </div>
+                        <div class="w-1/2 relative rounded-3xl overflow-hidden shadow-2xl border-4 border-yellow-400 scale-105 group-hover:scale-110 transition-transform">
+                            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover" alt="After">
+                            <span class="absolute bottom-4 left-4 bg-green-600 text-white text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest">After</span>
+                        </div>
+                    </div>
+                    <p class="text-center font-bold text-gray-800 mt-8 text-xl">Residential Septic Restoration</p>
+                </div>
+                <!-- Comparison 2 -->
+                <div class="group">
+                    <div class="flex gap-4 h-72">
+                        <div class="w-1/2 relative rounded-3xl overflow-hidden shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1527515841021-36b3b59367d3?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover" alt="Before">
+                            <span class="absolute bottom-4 left-4 bg-red-600 text-white text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest">Before</span>
+                        </div>
+                        <div class="w-1/2 relative rounded-3xl overflow-hidden shadow-2xl border-4 border-yellow-400 scale-105 group-hover:scale-110 transition-transform">
+                            <img src="https://images.unsplash.com/photo-1527515545081-5db817172677?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover" alt="After">
+                            <span class="absolute bottom-4 left-4 bg-green-600 text-white text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest">After</span>
+                        </div>
+                    </div>
+                    <p class="text-center font-bold text-gray-800 mt-8 text-xl">Drainage Pipe Desilting</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Project Grid -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 flex items-center gap-3 uppercase tracking-tighter">
+                <span class="bg-yellow-400 w-3 h-10 rounded-full"></span>
+                Recent Project Grid
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="gallery-item group relative h-96 rounded-[3rem] overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1562016600-ece13e8ba570?auto=format&fit=crop&q=80&w=500" class="w-full h-full object-cover transition duration-700" alt="Work">
+                    <div class="gallery-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-10 text-white">
+                        <h4 class="font-extrabold text-2xl mb-1 uppercase">Industrial Desludging</h4>
+                        <p class="text-sm font-medium opacity-80 uppercase tracking-widest">Location: Manufacturing Hub</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="gallery-item group relative h-96 rounded-[3rem] overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80&w=500" class="w-full h-full object-cover transition duration-700" alt="Work">
+                    <div class="gallery-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-10 text-white">
+                        <h4 class="font-extrabold text-2xl mb-1 uppercase">Deep Drain Clearing</h4>
+                        <p class="text-sm font-medium opacity-80 uppercase tracking-widest">Location: Luxury Apartments</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="gallery-item group relative h-96 rounded-[3rem] overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7bc3?auto=format&fit=crop&q=80&w=500" class="w-full h-full object-cover transition duration-700" alt="Work">
+                    <div class="gallery-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-10 text-white">
+                        <h4 class="font-extrabold text-2xl mb-1 uppercase">Vacuum Suction</h4>
+                        <p class="text-sm font-medium opacity-80 uppercase tracking-widest">Location: Corporate Campus</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-16">
+            <div>
+                <div class="flex items-center gap-2 mb-8">
+                    <div class="bg-yellow-400 p-2 rounded-lg text-gray-900"><i class="fas fa-droplet"></i></div>
+                    <span class="font-bold text-2xl uppercase">SRIRAM CLEANING</span>
+                </div>
+                <p class="text-gray-400 italic">Professional sanitation services across houses, hospitals, and colleges. Clean to the most.</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-8 uppercase tracking-widest">Menu</h4>
+                <ul class="space-y-4 text-gray-400">
+                    <li><a href="mahahome.html" class="hover:text-yellow-400 transition">Return to Home</a></li>
+                    <li><a href="mahagallery.html" class="text-yellow-400 transition font-bold">Our Gallery</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-8 uppercase tracking-widest">Contact</h4>
+                <a href="tel:+919585958990">
+    <p class="text-yellow-400 text-3xl font-bold">
+        +91 95859 58990
+    </p>
+</a>
+                <div class="flex gap-4 mt-6">
+                    <a href="https://wa.me/919585958990" target="_blank" aria-label="Chat on WhatsApp">
+                    <i class="fab fa-whatsapp text-2xl hover:text-green-500 cursor-pointer transition"></i>
+                    </a>
+                    <a href="https://www.instagram.com/your_instagram_username/" target="_blank" aria-label="Visit our Instagram">
+                    <i class="fab fa-instagram text-2xl hover:text-pink-500 cursor-pointer transition"></i>
+                    </a>
+                    <a href="https://www.facebook.com/your_facebook_page" target="_blank" aria-label="Visit our Facebook">
+                    <i class="fab fa-facebook text-2xl hover:text-blue-500 cursor-pointer transition"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons Mobile -->
+    <div class="fixed bottom-6 right-6 flex flex-col gap-3 md:hidden z-40">
+        <a href="https://wa.me/919585958990" class="bg-green-500 text-white p-4 rounded-full shadow-2xl animate-bounce flex items-center justify-center">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+        <a href="tel:+919585958990" class="bg-yellow-400 text-white p-4 rounded-full shadow-2xl flex items-center justify-center">
+            <i class="fas fa-phone text-2xl"></i>
+        </a>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                icon.className = 'fas fa-times text-2xl';
+            } else {
+                menu.classList.add('hidden');
+                icon.className = 'fas fa-bars text-2xl';
+            }
+        }
+    </script>
+</body>
+</html>

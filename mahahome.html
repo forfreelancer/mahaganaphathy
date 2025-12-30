@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SriRam Cleaning | Tank Cleaning Services</title>
+    <!-- Tailwind CSS for Layout -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Icons (Matching the look of lucide-react) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Modern Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .page {
+            display: none;
+        }
+        .page.active {
+            display: block;
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+               <div class="flex-shrink-0 cursor-pointer flex items-center gap-2" onclick="showPage('home')">
+    <div class="rounded-full border-2 border-yellow-400 p-0">
+        <img 
+            src="mahaganapathyph/mahaph5.png"
+            alt="Sri Ram Cleaning Logo"
+            class="w-18 h-16 object-contain rounded-full"
+        >
+    </div>
+    <span class="font-bold text-xl tracking-tight text-gray-800">
+        SRIRAM CLEANING
+    </span>
+</div>
+                
+                <!-- Desktop Links -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <button onclick="showPage('home')" class="nav-link font-medium text-gray-600 hover:text-yellow-500 transition">Home</button>
+                    <a href="mahagallery.html"
+   class="nav-link font-medium text-gray-600 hover:text-yellow-500 transition">
+   Gallery
+</a>
+                    <button onclick="showPage('contact')" class="nav-link font-medium text-gray-600 hover:text-yellow-500 transition">Contact Us</button>
+                    <a href="tel:+919585958990" class="bg-yellow-400 text-white px-6 py-2 rounded-full font-bold hover:bg-yellow-500 transition shadow-lg flex items-center gap-2">
+                        <i class="fas fa-phone"></i> Call Now
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button onclick="toggleMenu()" class="text-gray-600 p-2">
+                        <i id="menu-icon" class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu Links -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t py-4 px-4 space-y-4 shadow-xl">
+            <button onclick="showPage('home')" class="block w-full text-left py-2 font-medium">Home</button>
+            <a href="mahagallery.html"
+   class="block w-full text-left py-2 font-medium">
+   Gallery
+</a>
+
+            <button onclick="showPage('contact')" class="block w-full text-left py-2 font-medium">Contact Us</button>
+
+            <a href="tel:+919585958990" class="block w-full text-center bg-yellow-400 text-white py-3 rounded-lg font-bold">Call Now</a>
+        </div>
+    </nav>
+
+    <!-- PAGE 1: HOME -->
+    <div id="home-page" class="page active">
+        <!-- Hero Section -->
+        <section class="relative bg-white py-20 lg:py-32 overflow-hidden">
+            <div class="absolute top-0 right-0 w-1/3 h-full bg-yellow-50 skew-x-12 transform translate-x-1/2 -z-10"></div>
+            <div class="max-w-7xl mx-auto px-4 text-center relative">
+                <div class="inline-flex items-center gap-2 bg-yellow-100 text-yellow-700 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
+                    <i class="far fa-clock"></i> 24/7 EMERGENCY SERVICES
+                </div>
+                <h1 class="text-5xl md:text-7xl font-extrabold text-gray-900 mb-6 tracking-tight uppercase">
+                    SRIRAM  <span class="text-yellow-400">CLEANING</span>
+                </h1>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-10">
+                    Professional Tank & Drainage Cleaning Services. We ensure your environment is clean to the most.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button onclick="showPage('contact')" class="bg-yellow-400 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-yellow-500 shadow-xl transition-all hover:-translate-y-1">
+                        Get a Quote
+                    </button>
+                    <a href="tel:+919585958990" class="bg-white border-2 border-yellow-400 text-yellow-500 px-10 py-4 rounded-xl font-bold text-lg hover:bg-yellow-50 transition-all">
+                        Contact Support
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold mb-4">Our Specialized Services</h2>
+                    <div class="w-20 h-1.5 bg-yellow-400 mx-auto rounded-full"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                    <!-- Service 1 -->
+                    <div class="service-card bg-white p-8 rounded-2xl shadow-sm transition-all border-b-4 border-transparent hover:border-yellow-400 text-center">
+                        <div class="bg-yellow-50 text-yellow-500 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+                            <i class="fas fa-truck-monster text-3xl"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-800 leading-tight">Septic Tank Cleaning</h3>
+                    </div>
+                    <!-- Service 2 -->
+                    <div class="service-card bg-white p-8 rounded-2xl shadow-sm transition-all border-b-4 border-transparent hover:border-yellow-400 text-center">
+                        <div class="bg-yellow-50 text-yellow-500 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+                            <i class="fas fa-faucet-drip text-3xl"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-800 leading-tight">Drainage Cleaning</h3>
+                    </div>
+                    <!-- Service 3 -->
+                    <div class="service-card bg-white p-8 rounded-2xl shadow-sm transition-all border-b-4 border-transparent hover:border-yellow-400 text-center">
+                        <div class="bg-yellow-50 text-yellow-500 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+                            <i class="fas fa-trash-can text-3xl"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-800 leading-tight">Soak Pit Cleaning</h3>
+                    </div>
+                    <!-- Service 4 -->
+                    <div class="service-card bg-white p-8 rounded-2xl shadow-sm transition-all border-b-4 border-transparent hover:border-yellow-400 text-center">
+                        <div class="bg-yellow-50 text-yellow-500 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+                            <i class="fas fa-shield-halved text-3xl"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-800 leading-tight">Sewage Cleaning</h3>
+                    </div>
+                    <!-- Service 5 -->
+                    <div class="service-card bg-white p-8 rounded-2xl shadow-sm transition-all border-b-4 border-transparent hover:border-yellow-400 text-center">
+    <div class="bg-yellow-50 text-yellow-500 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+        <i class="fas fa-water text-3xl"></i>
+    </div>
+    <h3 class="font-bold text-gray-800 leading-tight">Chamber Cleaning</h3>
+</div>  
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold mb-6 italic">"Our work will be clean to the most"</h2>
+                    <p class="text-gray-600 mb-6 text-lg leading-relaxed">
+                        Maha Ganapathy has been a trusted name in environmental sanitation for over a decade. We specialize in maintaining the hygiene of your property through advanced cleaning techniques and dedicated staff.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-circle-check text-yellow-400"></i>
+                            <span class="font-semibold text-gray-700">Modern Equipment</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-circle-check text-yellow-400"></i>
+                            <span class="font-semibold text-gray-700">Expert Team</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-yellow-400 rounded-3xl -rotate-3 opacity-20"></div>
+                    <img src="mahaganapathyph/mahaph1.JPG" class="relative rounded-3xl shadow-2xl w-full h-96 object-cover" alt="Cleaning Team">
+                </div>
+            </div>
+        </section>
+
+        <!-- Target Sectors -->
+        <section class="py-20 bg-yellow-400 text-white">
+            <div class="max-w-7xl mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold mb-12 uppercase tracking-wide">Who We Serve</h2>
+                <div class="flex flex-wrap justify-center gap-8 md:gap-16">
+                    <div class="flex flex-col items-center">
+                        <div class="bg-white/20 p-6 rounded-full mb-4 hover:bg-white hover:text-yellow-400 transition-all">
+                            <i class="fas fa-graduation-cap text-4xl"></i>
+                        </div>
+                        <span class="font-bold text-xl">Colleges</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="bg-white/20 p-6 rounded-full mb-4 hover:bg-white hover:text-yellow-400 transition-all">
+                            <i class="fas fa-industry text-4xl"></i>
+                        </div>
+                        <span class="font-bold text-xl">Companies</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="bg-white/20 p-6 rounded-full mb-4 hover:bg-white hover:text-yellow-400 transition-all">
+                            <i class="fas fa-building text-4xl"></i>
+                        </div>
+                        <span class="font-bold text-xl">Apartments</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="bg-white/20 p-6 rounded-full mb-4 hover:bg-white hover:text-yellow-400 transition-all">
+                            <i class="fas fa-house text-4xl"></i>
+                        </div>
+                        <span class="font-bold text-xl">Houses</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="bg-white/20 p-6 rounded-full mb-4 hover:bg-white hover:text-yellow-400 transition-all">
+                            <i class="fas fa-hospital text-4xl"></i>
+                        </div>
+                        <span class="font-bold text-xl">Hospitals</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Block -->
+        <section id="stats-section" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="bg-gray-900 text-white rounded-[2rem] p-12 md:p-20 flex flex-col md:flex-row justify-between items-center gap-10 text-center md:text-left">
+                    <div>
+                        <h2 class="text-4xl md:text-5xl font-bold mb-2 text-yellow-400">
+                            <span class="stat-number" data-target="5000">0</span>+
+                        </h2>
+                        <p class="font-medium text-lg opacity-80 uppercase tracking-widest">Happy Clients</p>
+                    </div>
+                    <div class="h-16 w-px bg-gray-700 hidden md:block"></div>
+                    <div>
+                        <h2 class="text-4xl md:text-5xl font-bold mb-2 text-yellow-400">
+                            <span class="stat-number" data-target="12">0</span>+
+                        </h2>
+                        <p class="font-medium text-lg opacity-80 uppercase tracking-widest">Years of Excellence</p>
+                    </div>
+                    <div class="h-16 w-px bg-gray-700 hidden md:block"></div>
+                    <div>
+                        <h2 class="text-4xl md:text-5xl font-bold mb-2 text-yellow-400">
+                            <span class="stat-number" data-target="24">0</span>/<span class="stat-number" data-target="7">0</span>
+                        </h2>
+                        <p class="font-medium text-lg opacity-80 uppercase tracking-widest">Service Available</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12">Work Showcase</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=400" class="w-full h-64 object-cover rounded-2xl shadow hover:scale-105 transition duration-300" alt="Work 1">
+                    <img src="https://images.unsplash.com/photo-1527515545081-5db817172677?auto=format&fit=crop&q=80&w=400" class="w-full h-64 object-cover rounded-2xl shadow hover:scale-105 transition duration-300" alt="Work 2">
+                    <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80&w=400" class="w-full h-64 object-cover rounded-2xl shadow hover:scale-105 transition duration-300" alt="Work 3">
+                    <img src="https://images.unsplash.com/photo-1562016600-ece13e8ba570?auto=format&fit=crop&q=80&w=400" class="w-full h-64 object-cover rounded-2xl shadow hover:scale-105 transition duration-300" alt="Work 4">
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-16 underline decoration-yellow-400 underline-offset-8">Customer Reviews</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 p-8 rounded-3xl shadow-sm border border-gray-100">
+                        <div class="flex text-yellow-400 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p class="text-gray-700 italic mb-4">"Excellent service. They arrived on time and cleaned the septic tank thoroughly. Highly recommend."</p>
+                        <span class="font-bold">- Ramesh Kumar</span>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-3xl shadow-sm border border-gray-100">
+                        <div class="flex text-yellow-400 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p class="text-gray-700 italic mb-4">"The drainage block was fixed in 30 minutes. Very professional staff and reasonable pricing."</p>
+                        <span class="font-bold">- Priya S.</span>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-3xl shadow-sm border border-gray-100">
+                        <div class="flex text-yellow-400 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p class="text-gray-700 italic mb-4">"We use SriRam Cleaning for our annual cleaning. They are the most reliable in the city."</p>
+                        <span class="font-bold">- Green Valley Apartments</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- PAGE 2: CONTACT -->
+    <div id="contact-page" class="page py-16 lg:py-24 bg-gray-50 min-h-screen">
+        <div class="max-w-7xl mx-auto px-4">
+            <h1 class="text-4xl font-extrabold text-gray-900 mb-12 text-center">Contact Full Details</h1>
+            <div class="grid lg:grid-cols-3 gap-12">
+                <!-- Info -->
+                <div class="space-y-6">
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 space-y-8">
+                        <h3 class="text-2xl font-bold border-b pb-4">Contact Info</h3>
+                        <div class="flex items-start gap-4">
+                            <div class="text-yellow-500 text-xl"><i class="fas fa-phone"></i></div>
+                            <div>
+                                <p class="text-xs font-bold text-gray-400 uppercase">Mobile</p>
+                                <a href="tel:+919585958990" class="text-lg font-bold">+91 95859 58990</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="text-green-500 text-xl"><i class="fab fa-whatsapp"></i></div>
+                            <div>
+                                <p class="text-xs font-bold text-gray-400 uppercase">WhatsApp</p>
+                                <a href="https://wa.me/919585958990" class="text-lg font-bold">Chat with us</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="text-blue-500 text-xl"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <p class="text-xs font-bold text-gray-400 uppercase">Email</p>
+                                <a href="mailto:mithileshkasm9@gamil.com" class="text-lg font-bold">contact@mahaganapathy.com</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="text-red-500 text-xl"><i class="fas fa-location-dot"></i></div>
+                            <div>
+                                <p class="text-xs font-bold text-gray-400 uppercase">Address</p>
+                                <p class="font-bold">GN MILLS, Mettupalayam Rd, Pallakattu Thottam, Coimbatore, Tamil Nadu 641029</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Map Mock -->
+                    <div class="bg-gray-200 rounded-3xl h-64 overflow-hidden border-4 border-white shadow">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3915.6814604309193!2d76.9443045!3d11.062491600000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8f72c97669fdd%3A0x5343a63483524f3!2sSRI%20MAHAGANAPATHY%20ENTERPRISES!5e0!3m2!1sen!2sin!4v1767092818536!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+                </div>
+                <!-- Form -->
+                <div class="lg:col-span-2">
+                    <div class="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-xl">
+                        <h3 class="text-3xl font-bold mb-8">Service Inquiry Form</h3>
+                        <form id="wa-form" class="space-y-6" onsubmit="sendToWhatsApp(event)">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <input type="text" id="wa-name" placeholder="Full Name" class="w-full bg-gray-50 rounded-2xl p-4 border-none focus:ring-2 focus:ring-yellow-400" required>
+                                <input type="tel" id="wa-phone" placeholder="Phone Number" class="w-full bg-gray-50 rounded-2xl p-4 border-none focus:ring-2 focus:ring-yellow-400" required>
+                            </div>
+                            <select id="wa-service" class="w-full bg-gray-50 rounded-2xl p-4 border-none focus:ring-2 focus:ring-yellow-400">
+                                <option value="Septic Tank Cleaning">Septic Tank Cleaning</option>
+                                <option value="Drainage Cleaning">Drainage Cleaning</option>
+                                <option value="Soak Pit Cleaning">Soak Pit Cleaning</option>
+                                <option value="Drain Block Removal">Drain Block Removal</option>
+                                <option value="General Cleaning">General Cleaning</option>
+                            </select>
+                            <textarea id="wa-details" rows="4" placeholder="How can we help you?" class="w-full bg-gray-50 rounded-2xl p-4 border-none focus:ring-2 focus:ring-yellow-400"></textarea>
+                            <button type="submit" class="w-full bg-yellow-400 text-white font-bold py-5 rounded-2xl shadow-lg hover:bg-yellow-500 transition-all text-xl uppercase tracking-widest">
+                                Submit Request
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-12">
+            <div>
+                <div class="flex items-center gap-2 mb-6">
+                    <div class="bg-yellow-400 p-2 rounded-lg text-gray-900"><i class="fas fa-droplet"></i></div>
+                    <span class="font-bold text-2xl tracking-tight">SRIRAM CLEANING</span>
+                </div>
+                <p class="text-gray-400 mb-6 italic">Our work will be clean to the most.</p>
+                <div class="flex gap-4">
+                    <a href="https://www.facebook.com/your_facebook_page" target="_blank" aria-label="Visit our Facebook">
+                    <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-400 hover:text-gray-900 transition cursor-pointer"><i class="fab fa-facebook-f"></i></div>
+                    </a>
+                    <a href="https://www.instagram.com/your_instagram_username/" target="_blank" aria-label="Visit our Instagram">
+                    <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-400 hover:text-gray-900 transition cursor-pointer"><i class="fab fa-instagram"></i></div>
+                    </a>
+                    <a href="https://wa.me/919585958990" target="_blank" aria-label="Chat on WhatsApp">
+                    <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-400 hover:text-gray-900 transition cursor-pointer"><i class="fab fa-whatsapp"></i></div>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-6 border-b border-gray-800 pb-2">Quick Links</h4>
+                <ul class="space-y-3 text-gray-400">
+                    <li><button onclick="showPage('home')" class="hover:text-yellow-400 transition">Home</button></li>
+                    <li><button onclick="showPage('contact')" class="hover:text-yellow-400 transition">Contact Us</button></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-6 border-b border-gray-800 pb-2">Available 24/7</h4>
+                <a href="tel:+919585958990">
+    <p class="text-yellow-400 text-3xl font-bold">
+        +91 95859 58990
+    </p>
+</a>
+                <p class="text-gray-500 mt-2">Call anytime for emergency cleaning needs.</p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 mt-16 pt-8 border-t border-gray-800 text-center text-gray-500">
+            &copy; 2024 SriRam Cleaning Services. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Floating Buttons Mobile -->
+    <div class="fixed bottom-6 right-6 flex flex-col gap-3 md:hidden z-40">
+        <a href="https://wa.me/919585958990" class="bg-green-500 text-white p-4 rounded-full shadow-2xl animate-bounce">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+        <a href="tel:+919585958990" class="bg-yellow-400 text-white p-4 rounded-full shadow-2xl">
+            <i class="fas fa-phone text-2xl"></i>
+        </a>
+    </div>
+
+    <script>
+        // Simple page router logic
+        function showPage(pageId) {
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById(pageId + '-page').classList.add('active');
+            document.getElementById('mobile-menu').classList.add('hidden');
+            document.getElementById('menu-icon').className = 'fas fa-bars text-2xl';
+            window.scrollTo(0, 0);
+            
+            // Re-trigger stats animation if navigating to home
+            if(pageId === 'home') {
+                resetAndStartStats();
+            }
+        }
+
+        // Mobile menu toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                icon.className = 'fas fa-times text-2xl';
+            } else {
+                menu.classList.add('hidden');
+                icon.className = 'fas fa-bars text-2xl';
+            }
+        }
+
+        // WhatsApp Form Submission
+        function sendToWhatsApp(event) {
+            event.preventDefault();
+            const name = document.getElementById('wa-name').value;
+            const phone = document.getElementById('wa-phone').value;
+            const service = document.getElementById('wa-service').value;
+            const details = document.getElementById('wa-details').value;
+            const recipient = "919585958990"; 
+            let message = "*New Cleaning Inquiry - SriRam Cleaning*%0A%0A";
+            message += "*Name:* " + encodeURIComponent(name) + "%0A";
+            message += "*Phone:* " + encodeURIComponent(phone) + "%0A";
+            message += "*Service:* " + encodeURIComponent(service) + "%0A";
+            message += "*Details:* " + encodeURIComponent(details || "No additional details provided.");
+            const waUrl = "https://wa.me/" + recipient + "?text=" + message;
+            window.open(waUrl, '_blank');
+        }
+
+        // --- STATS COUNT ANIMATION LOGIC ---
+        
+        function animateValue(obj, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                const current = Math.floor(progress * (end - start) + start);
+                // Formatting for thousands
+                obj.innerHTML = current >= 1000 ? current.toLocaleString() : current;
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+
+        function startStatsAnimation() {
+            const stats = document.querySelectorAll('.stat-number');
+            stats.forEach(stat => {
+                const target = parseInt(stat.getAttribute('data-target'));
+                animateValue(stat, 0, target, 2000); // 2 seconds duration
+            });
+        }
+
+        function resetAndStartStats() {
+            const stats = document.querySelectorAll('.stat-number');
+            stats.forEach(stat => stat.innerText = '0');
+            startStatsAnimation();
+        }
+
+        // Intersection Observer to start animation when scrolled into view
+        const observerOptions = {
+            threshold: 0.5
+        };
+
+        const statsObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    startStatsAnimation();
+                    observer.unobserve(entry.target); // Animate only once per view
+                }
+            });
+        }, observerOptions);
+
+        // Initialize when window loads
+        window.addEventListener('DOMContentLoaded', () => {
+            const statsSection = document.getElementById('stats-section');
+            if (statsSection) {
+                statsObserver.observe(statsSection);
+            }
+        });
+    </script>
+</body>
+</html>
