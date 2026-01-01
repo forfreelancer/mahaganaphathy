@@ -409,7 +409,7 @@
                                 </div>
                                 <div class="overflow-hidden">
                                     <p class="text-xs font-bold text-gray-400 uppercase">Email</p>
-                                    <a href="mailto:mithileshkasm9@gamil.com" class="text-sm md:text-base font-bold hover:text-blue-500 transition break-all leading-tight">contact@mahaganapathy.com</a>
+                                    <a href="mailto:Sriramseptictankservices@gmail.com" class="text-sm md:text-base font-bold hover:text-blue-500 transition break-all leading-tight">contact@Sriramseptictankservices.com</a>
                                 </div>
                             </div>
 
@@ -488,7 +488,7 @@
                     <a href="https://www.instagram.com/sriramseptictankcleaning/" target="_blank" aria-label="Visit our Instagram">
                     <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-400 hover:text-gray-900 transition cursor-pointer"><i class="fab fa-instagram"></i></div>
                     </a>
-                    <a href="https://www.facebook.com/your_facebook_page" target="_blank" aria-label="Visit our Facebook">
+                    <a href="https://www.facebook.com/share/1A6pfwRKLU/" target="_blank" aria-label="Visit our Facebook">
                     <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-400 hover:text-gray-900 transition cursor-pointer"><i class="fab fa-facebook-f"></i></div>
                     </a>
                 </div>
@@ -511,7 +511,7 @@
             </div>
         </div>
         <div class="max-w-7xl mx-auto px-4 mt-16 pt-8 border-t border-gray-800 text-center text-gray-500">
-            &copy; 2024 SriRam Cleaning Services. All rights reserved.
+            &copy; <span id="year"></span> SriRam Cleaning Services. All rights reserved.
         </div>
     </footer>
 
@@ -623,6 +623,10 @@
             if (statsSection) {
                 statsObserver.observe(statsSection);
             }
+            const yearEl = document.getElementById("year");
+        if (yearEl) {
+            yearEl.textContent = new Date().getFullYear();
+        }
         });
     </script>
 </body>
